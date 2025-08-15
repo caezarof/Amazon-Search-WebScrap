@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Amazon Scraper</title>
+	<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+	<header class="container">
+		<h1>Amazon Scraper</h1>
+		<p class="subtitle">Digite uma palavra-chave, clique em buscar e veja os resultados.</p>
+	</header>
+
+	<main class="container">
+		<form id="search-form" class="search">
+			<label for="keyword" class="sr-only">Palavra-chave</label>
+			<input id="keyword" type="text" placeholder="Ex.: iphone 15" autocomplete="off" />
+			<button id="search-btn" type="submit">Buscar</button>
+		</form>
+
+		<section id="status" aria-live="polite" class="status"></section>
+
+		<section id="results" class="grid" aria-live="polite"></section>
+	</main>
+
+	<footer class="container footer">
+		<small>Backend esperado em <code>/api/scrape</code>. Ajuste no <code>vite.config.ts</code> se precisar.</small>
+	</footer>
+
+	<script type="module" src="/main.js"></script>
+</body>
+</html>
